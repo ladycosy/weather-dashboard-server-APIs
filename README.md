@@ -1,9 +1,7 @@
 # weather-dashboard-server-APIs
 Weather dashboard that will run in the browser and feature dynamically updated `HTML and CSS`
 
-# anna-portfolio-page
 
-This is a portfolio page created in `HTML and CSS`. The code had been written from the scratch in `VS Code` program. The purpose of this project is to introduce myself and the projects I have done. The page also features links with contact information.
 
 
 ## User Story
