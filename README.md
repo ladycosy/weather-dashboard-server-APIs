@@ -2,7 +2,9 @@
 
 Weather dashboard that will run in the browser and feature dynamically updated `HTML and CSS`
 
-Server APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another `application's API` and using it in the context of their own. 
+## Overview 
+
+Server APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with **retrieving data from another `application's API` and using it in the context of their own**. 
 
 I will build a weather dashboard that runs in the browser and features dynamically updated `HTML and CSS`.
 
