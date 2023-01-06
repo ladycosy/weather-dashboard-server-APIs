@@ -56,7 +56,7 @@ The following image shows the web application's appearance and functionality:
 
 ## Link to Project GitHub Repo
 
-[GitHub Repo]()
+[GitHub Repo](https://github.com/ladycosy/weather-dashboard-server-APIs.git)
 
 ## Screenshot
 <img src="https://github.com/ladycosy/anna-portfolio_page/blob/fc7d317ed90cd572c830b26ed04c3ee0de7c3958/images/page_screenshot.png" alt="page screenshot" width="400"/>
