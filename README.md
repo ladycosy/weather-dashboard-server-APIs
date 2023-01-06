@@ -33,15 +33,17 @@ SO THAT I can showcase my skills and talents to potential employers
 
 ## Mock-Up
 
-![](https://github.com/ladycosy/anna-portfolio_page/blob/main/images/01-css-challenge-demo.gif)
+The following image shows the web application's appearance and functionality:
+
+![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for London.](./assets/10-server-side-apis-challenge-demo.png)
 
 ## Link to Deployed Application
 
-[Live URL](https://ladycosy.github.io/anna-portfolio-page/)
+[Live URL]()
 
 ## Link to Project GitHub Repo
 
-[GitHub Repo](https://github.com/ladycosy/anna-portfolio-page.git)
+[GitHub Repo]()
 
 ## Screenshot
 <img src="https://github.com/ladycosy/anna-portfolio_page/blob/fc7d317ed90cd572c830b26ed04c3ee0de7c3958/images/page_screenshot.png" alt="page screenshot" width="400"/>
