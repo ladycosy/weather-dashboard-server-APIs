@@ -1,102 +1,169 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <title>Weather Dashboard</title>
-  </head>
 
-  <body>
-    <header
-      class="container-fluid text-center text-white bg-dark p-2 weather-header"
-    >
-      <h1>Weather Dashboard</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Weather Dashboard</title>
+</head>
 
-    <!-- max-width for ultra wide resolutions -->
-    <div class="container-fluid" style="max-width: 1400px">
-      <div class="row">
-        <aside class="col-lg-3 pb-3">
-          <h2 id="form-heading" class="mt-1 h3 form-label">
-            Search for a City:
-          </h2>
-          <form id="search-form" class="form">
-            <div class="form-inline form-group">
-              <div class="input-group">
-                <input
-                  class="form-input weather-search"
-                  type="text"
-                  id="search-input"
-                  placeholder="London"
-                  aria-labelledby="form-heading"
-                  aria-controls="today forecast"
-                  style="
+<body>
+  <header class="container-fluid text-center text-white bg-dark p-2 weather-header">
+    <h1>Weather Dashboard</h1>
+  </header>
+
+  <!-- max-width for ultra wide resolutions -->
+  <div class="container-fluid" style="max-width: 1400px; border: solid 4px black;">
+    <div class="row">
+      <aside class="col-lg-3 pb-3" style="border: solid 3px orange; display:flex; flex-direction: column;">
+        <h2 id="form-heading" class="mt-1 h3 form-label">
+          Search for a City:
+        </h2>
+        <form id="search-form" class="form">
+          <div class="form-inline form-group">
+            <!-- City input box -->
+            <div class="input-group">
+              <input class="form-input weather-search" type="text" id="search-input" placeholder="London"
+                aria-labelledby="form-heading" aria-controls="today forecast" style="
                     border: solid 1px rgb(175, 167, 167);
                     border-radius: 7px;
-                  "
-                />
+                    width: 100%;
+                    height: 30px;
+                    margin-bottom: 10px;
+                  " />
+              <!-- Blue 'search' button -->
+              <div class="input-group-append">
 
-                <div class="input-group-append">
-                  <button
-                    type="submit"
-                    class="btn search-button"
-                    id="search-button"
-                    aria-label="submit search"
-                    style="background-color: lightskyblue; color: white"
-                    ;
-                    border-radius:
-                    7px;
-                  >
-                    Search
-                  </button>
+                <button type="submit" class="btn search-button" id="search-button" aria-label="submit search" style="background-color: rgb(43, 146, 210); 
+                    color: white;
+                   padding-top: 0px;
+                   padding-bottom: 0px;
+                    min-width: 320px;
+                    height: 30px;
+                    border-radius: 7px;">
+                  Search
+                </button>
+                <hr class="hr weather-hr"/>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="list-group" id="history"></div>
+      </aside>
 
-                  <hr class="hr weather-hr" />
+      <div class="col-lg-9 pb-3" style="border: solid 3px orange; display: block;">
+        <!-- This is section with city, (date), weather icon -->
+        <!-- The section has a boarder and 4 rows-->
+        <section id="today" class="mt-3" role="region" aria-live="polite" style="border: solid 1px rgb(175, 167, 167)">
+          <div class="city-date-icon" style="display:inline-flex; align-items: center">
+            <h3 #="city-name">City </h3>
+            <h3 #="forecast-date"> Date</h3>
+            <i #="icon">Icon</i>
+          </div>
+          <p #="temp">Temp:</p>
+          <p #="wind">Wind:</p>
+          <p #="humidity">Humidity:</p>
+
+        </section>
+        <!-- This section has a header <h4> and 5 cards that each show a weather condition for different day -->
+        <section id="forecast" class="row mt-3" role="region" aria-live="polite">
+          <div>
+            <h4 style="display: inline;">5-Day Forecast:</h4>
+          </div>
+          <!-- Cards section -->
+          <div class="card container"
+            style="border: solid 2px black; flex-direction: row; justify-content:space-around; flex-wrap: wrap;">
+            <div class="top-cardcontainer col-lg-2 col-md-4 col-sm-6">
+              <div class="col">
+                <div class="card" style="background-color: rgb(25, 20, 68);">
+                  <h5 #="forecast-date">Date</h5>
+                  <i #="icon">icon</i>
+                  <p #="temp">Temp:</p>
+                  <p #="wind">Wind:</p>
+                  <p #="humidity">Humidity:</p>
                 </div>
               </div>
             </div>
-          </form>
-          <div class="list-group" id="history"></div>
-        </aside>
+            <div class="top-cardcontainer col-lg-2 col-md-4 col-sm-6">
+              <div class="col">
+                <div class="card" style="background-color: rgb(25, 20, 68);">
+                  <h5 #="forecast-date">Date</h5>
+                  <i #="icon">icon</i>
+                  <p #="temp">Temp:</p>
+                  <p #="wind">Wind:</p>
+                  <p #="humidity">Humidity:</p>
+                </div>
+              </div>
+            </div>
+            <div class="top-cardcontainer col-lg-2 col-md-4 col-sm-6">
+              <div class="col">
+                <div class="card" style="background-color: rgb(25, 20, 68);">
+                  <h5 #="forecast-date">Date</h5>
+                  <i #="icon">icon</i>
+                  <p #="temp">Temp:</p>
+                  <p #="wind">Wind:</p>
+                  <p #="humidity">Humidity:</p>
+                </div>
 
-        <div class="col-lg-9 pb-3">
-          <!-- This is section with city, (date), weather icon -->
-          <!-- The section has a boarder and 4 rows-->
-          <section
-            id="today"
-            class="mt-3"
-            role="region"
-            aria-live="polite"
-            style="border: solid 1px rgb(175, 167, 167); margin-left: 0px"
-          >
-            <h3>Hello</h3>
-          </section>
-          <!-- This section has a header <h4> and 5 cards that each show a weather condition for different day -->
-          <section
-            id="forecast"
-            class="row mt-3"
-            role="region"
-            aria-live="polite"
-          >
-            <h4>5-Day Forecast:</h4>
-          </section>
-        </div>
+              </div>
+            </div>
+            <div class="top-cardcontainer col-lg-2 col-md-4 col-sm-6">
+              <div class="col">
+                <div class="card" style="background-color: rgb(25, 20, 68);">
+                  <h5 #="forecast-date">Date</h5>
+                  <i #="icon">icon</i>
+                  <p #="temp">Temp:</p>
+                  <p #="wind">Wind:</p>
+                  <p #="humidity">Humidity:</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="top-cardcontainer col-lg-2 col-md-4 col-sm-6">
+              <div class="col">
+                <div class="card" style="background-color: rgb(25, 20, 68);">
+                  <h5 #="forecast-date">Date</h5>
+                  <i #="icon">icon</i>
+                  <p #="temp">Temp:</p>
+                  <p #="wind">Wind:</p>
+                  <p #="humidity">Humidity:</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
       </div>
-    </div>
 
-    <!-- Moment.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+      <!--            
+              <div class="card" style="width: 18rem">
+                <div
+                  class="card-body"
+                  style="background-color: rgb(43, 39, 66); color: white"
+                >
+                  <h5 #="forecast-date"></h5>
+                  <i #="icon"></i>
+                  <p #="temp">Temp:</p>
+                  <p #="wind">Wind:</p>
+                  <p #="humidity">Humidity:</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+      </section>
+    </div>
+  </div>
+  </div>
+
+  <!-- Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>
