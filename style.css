@@ -1,17 +1,16 @@
-/* header {
-  background-color: blue;
-} */
-
 .card {
   color: white;
   /* width: 100px;
   height: 200px; */
   display: block;
   padding-left: 3px;
-}
-#forecast-date {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  
+/* #forecast-date {
   font: bold;
-}
+}; */
 
 p {
   font-size: 10px;
