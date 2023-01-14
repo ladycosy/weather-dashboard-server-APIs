@@ -21,9 +21,9 @@ Information on how to work with the OpenWeather API - [Full-Stack Blog on how to
 
 ## User Story
 ```
-I AM a student 
-WHO needs a portfolio of work 
-SO THAT I can showcase my skills and talents to potential employers
+AS A traveler
+I WANT to see the weather outlook for multiple cities
+SO THAT I can plan a trip accordingly
 ```
 
 ## Acceptance Criteria
